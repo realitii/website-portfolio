@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Contact</title>
+	<link rel="shortcut icon" href="./wikipedia.ico" type = image/x-icon">
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/style.prod.css">
+<head>
+
+<body>
+	<header class="page-header">
+		<img src="http://via.placeholder.com/200x70" alt="logo" class="page-header_item">
+		<nav class="page-header_item">
+			<div>
+				<ul role="menubar" class="navigation-list">
+					<li role="presentation">
+						<a href="index.html" role="menuitem" class="navigation-list_item">Home</a>
+					</li>
+					<li role="presentation">
+						<a href="about.html" role="menuitem" class="navigation-list_item">About</a>
+					</li>
+					<li role="presentation">
+						<a href="contact.html" role="menuitem" class="navigation-list_item navigation-list_item--active">Contact</a>
+					</li>
+					<li role="presentation">
+						<a href="work.html" role="menuitem" class="navigation-list_item">Work</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<form action="" method="post" id="contact-form">
+		<label class="standard-label" for="contact-email">Email: </label>
+		<input type="email" id="contact-email">
+		
+		<label class="standard-label" for="contact-telephone">Telephone: </label>
+		<input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-telephone">
+
+		<label class="standard-label" for="contact-text">Message: </label>
+		<textarea maxlength="240" id="contact-text"></textarea>
+		<input type="submit" value="send message">
+	</form>
+
+	<main>
+		<h1>Contact</h1>
+		<div>
+			James Gunderson <br>
+			<a href="mailto:sorcerer.logic@gmail.com">sorcerer.logic@gmail.com</a>
+		</div>
+	</main>
+
+	<footer class="page-footer">
+		<p>Find me on</p>
+		<div class="social-media">
+			<img src="./img/github.svg" alt="Github">
+			<img src="./img/twitter.svg" alt="Twitter">
+			<img src="./img/linkedin.svg" alt="LinkedIn">
+		</div>
+	</footer>
+	
+	<!-- HTML accessibility script -->
+	<script src="./js/tota11y.min.js"></script>
+</body>
+
+
+</html>
