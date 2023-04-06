@@ -35,24 +35,24 @@
 		</nav>
 	</header>
 
-	<form action="" method="post" id="contact-form">
-		<label class="standard-label" for="contact-email">Email: </label>
-		<input type="email" id="contact-email">
-		
-		<label class="standard-label" for="contact-telephone">Telephone: </label>
-		<input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-telephone">
-
-		<label class="standard-label" for="contact-text">Message: </label>
-		<textarea maxlength="240" id="contact-text"></textarea>
-		<input type="submit" value="send message">
-	</form>
-
-	<main>
-		<h1>Contact</h1>
-		<div>
+	<main class="center-body"> 
+		<h1 id="contact-heading">Contact</h1>
+		<div id="contact-info">
 			James Gunderson <br>
 			<a href="mailto:sorcerer.logic@gmail.com">sorcerer.logic@gmail.com</a>
 		</div>
+		
+		<form action="" method="post" id="contact-form">
+			<label class="standard-label" for="contact-email">Email: </label>
+			<input type="email" id="contact-email">
+			
+			<label class="standard-label" for="contact-telephone">Telephone: </label>
+			<input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-telephone">
+
+			<label class="standard-label" for="contact-text">Message: </label>
+			<textarea maxlength="240" id="contact-text"></textarea>
+			<input type="submit" value="send message">
+		</form>
 	</main>
 
 	<footer class="page-footer">

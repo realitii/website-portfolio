@@ -104,6 +104,18 @@ button:hover, button:focus,
 	color: var(--dark-grey);
 }
 
+.center-body {
+	width: 80%;
+	margin: auto;
+}
+
+#contact-form {
+	display: flex;
+	flex-direction: column;	
+	width: 50%;
+	margin: auto;
+}
+
 .page-header {
 	display: flex;
 	width: 100%;
@@ -151,50 +163,6 @@ button:hover, button:focus,
 	text-align: center;
 }
 
-@keyframes color-change {
-  0% {
-    fill: #edc655;
-  }
-  50% {
-    fill: #fcffad;
-  }
-  100% {
-    fill: #f76414;
-  }
-}
-@keyframes cloud-move {
-  from {
-    transform: translate(0, 50px);
-  }
-  to {
-    transform: translate(200px, 50px);
-  }
-}
-@keyframes cloud-move-reverse {
-  from {
-    transform: translate(446px, 48px);
-  }
-  to {
-    transform: translate(100px, 48px);
-  }
-}
-.sun {
-  animation-duration: 4s;
-  animation-name: color-change;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-.cloud-front {
-  animation-duration: 30s;
-  animation-name: cloud-move;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-.cloud-back {
-  animation: 34s cloud-move-reverse infinite alternate linear;
-}
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
