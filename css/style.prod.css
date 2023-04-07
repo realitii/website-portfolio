@@ -7,202 +7,204 @@
 
 /*https://autoprefixer.github.io/*/
 /*https://madlittlemods.github.io/postcss-css-variables/playground/*/
-:root{
-	--primary-color: #357b70;
-	--secondary-color: #e0b354;
-	--dark-grey: #2b2b2b;
+:root {
+  --primary-color: #357b70;
+  --secondary-color: #e0b354;
+  --dark-grey: #2b2b2b;
 }
 
 * {
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 1.6;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-section h1{
-	text-align: center;
+section h1 {
+  text-align: center;
 }
 
 .grid_item {
-	display: inline-block;
-	width: 33%;
-	text-align: center;
+  display: inline-block;
+  width: 33%;
+  text-align: center;
 }
 
+@supports (display: grid) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 0;
+  }
 
-@supports (display:grid){
-	.grid {
-		display:-ms-grid;
-		display:grid;
-		-ms-grid-columns: 1fr 10px 1fr 10px 1fr;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-gap: 10px;
-		margin: 0;
-	}
-
-	.grid_item{
-		background-color: lightgray;
-		min-height: auto;
-		width: auto;
-		margin-bottom: 10px;
-	}
+  .grid_item {
+    background-color: lightgray;
+    min-height: auto;
+    width: auto;
+    margin-bottom: 10px;
+  }
 }
 
 h1 {
-	font-size: 30px;
-	font-weight: 700;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 h2 {
-	font-size: 24px;
-	font-weight: 700;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 h3 {
-	font-size: 18px;
-	font-weight: 700;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 a {
-	color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 a:visited {
-	/* visited link */
-	/*color: #05676e;*/
+  /* visited link */
+  /*color: #05676e;*/
 }
 
-a:hover, a:focus {
-	/* No underlining when hovering over a link */
-	text-decoration: none;
-	color: #000;
+a:hover,
+a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+  color: #000;
 }
 
 a:active {
-	/* selected link */
-  	color: #489c79;
+  /* selected link */
+  color: #489c79;
 }
 
 button,
 .button {
-	border: none;
-	font-family: inherit;
-	background-color: var(--primary-color);
-	color: white;
-	text-decoration: none;
-	padding: 10px;
-	border-radius: 3px;
-	border-bottom: 2px solid rgb(0,0,0);
-	-webkit-transition-duration: 0.2s;
-	     -o-transition-duration: 0.2s;
-	        transition-duration: 0.2s;
-	-webkit-transition-property: opacity;
-	-o-transition-property: opacity;
-	transition-property: opacity;
+  border: none;
+  font-family: inherit;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
 }
 
-button:hover, button:focus,
-.button:hover, .button:focus{
-	cursor: pointer;
-	opacity: 0.8;
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .button_secondary {
-	background-color: var(--secondary-color);
-	color: var(--dark-grey);
+  background-color: var(--secondary-color);
+  color: var(--dark-grey);
 }
 
 .center-body {
-	width: 80%;
-	margin: auto;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto;
-	grid-template-areas: 
-		"heading form"
-		"info form";
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "heading form"
+    "info form";
 }
 
 #contact-heading {
-	grid-area: heading;
+  grid-area: heading;
 }
 
 #contact-info {
-	grid-area: info;
+  grid-area: info;
 }
 
 #contact-form {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	flex-direction: column;	
-	width: 70%;
-	margin: auto;
-	grid-area: form;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+  grid-area: form;
 }
 
 .page-header {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	width: 100%;
-	padding: 20px;
-	border-bottom: 5px solid lightgrey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 5px solid lightgrey;
 }
 
-.page-header_item{
-	-webkit-box-flex: 0;
-	    -ms-flex: 0 1 150px;
-	        flex: 0 1 150px;
+.page-header_item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 150px;
+  flex: 0 1 150px;
 }
 
 .page-header_item:last-child {
-	-webkit-box-flex: 1;
-	    -ms-flex-positive: 1;
-	        flex-grow: 1;
-	text-align: right;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: right;
 }
 
 .navigation-list {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 .navigation-list li {
-	display: inline-block;
+  display: inline-block;
 }
 
 .navigation-list_item--active {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .profile {
-	max-width: 700px;
-	margin: 0 auto;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .profile_portrait {
-	float:left;
-	width: 250px;
-	margin-right: 40px;
-	border-radius: 50%;
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
 }
 
 .page-footer {
-	clear: both;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	text-align: center;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
 }
 
 @media all and (max-width: 500px) {
@@ -211,7 +213,7 @@ button:hover, button:focus,
     grid-template-columns: 1fr;
   }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: 1fr 1fr;
@@ -229,4 +231,3 @@ button:hover, button:focus,
     font-size: 22px;
   }
 }
-
